@@ -22,19 +22,18 @@ Layer - fully independent part of program with provide some kind of service
 
 Main app navigation hierarchy
 
-``` Localisation ``` 
-
-Has files for app localisation 
-
 ``` Modules ``` 
 
 Can be created be different arhitectual patterns as Apple MVC, MVP, MVVM, VIPER
 
 Represent small part of program which use Design, Network, Localisation, Utils layers 
 
+- decomponse part of complex screens on small part. Decompose this parts on UI and logic 
+
 ``` Utils ```
 
 - Extensions
+- Localisation
 
 
 
