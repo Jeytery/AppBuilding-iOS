@@ -20,7 +20,12 @@ Layer - fully independent part of program with provide some kind of service
 
 ``` Navigation ``` 
 
-Main app navigation hierarchy
+- Main app navigation hierarchy
+- All app modules.
+- Each module has to have his Navigator/Coordinator to handle all UIKit/SUI navigation 
+- Navigator/Coordinator also handle all UIViewControllers/UIView/View events with delegation pattern or with reactive events from ViewModel
+
+
 
 ``` Modules ``` 
 
