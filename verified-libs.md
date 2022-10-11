@@ -1,0 +1,5 @@
+- all Firebase libs
+- Alamofire (networking)
+- SnapKit (faster constraints)
+- Lister (fast table interface)
+- Pikko (best color picker under iOS 15)
