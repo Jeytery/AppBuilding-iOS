@@ -14,13 +14,21 @@
 - stub (имитируют какое-то поведение)
 - mock (заглушка, это любой пустой объект)
 ```swift 
-class MockNetworkService: NetworkManagerTarget {
+class MockNetworkManager: NetworkManagerTarget {
     func downlad(... args) {
         // empty 
     }
 
     func perform<Model: Encodable>(... args) {
         // empty
+    }
+
+    func getSomeArray() -> [Int] {
+        return []
+    }
+
+    func getSomeValue() -> Int? {
+        return nil
     }
 }
 ````
