@@ -52,6 +52,21 @@ class StubNetworkManager: NetworkManagerTarget {
     
 ```
 - spy (отслуживание поведения во время теста) 
+``` swift 
+class SpyNetworkManager: NetworkManagerTarget {
+
+    // closure with clousre as argument inside 
+    var downloadSpy: ((NetworkReqeust, (Result<URL, Error) -> Void) -> Void)? 
+
+    func downlad(request: NetworkReqeust, _ completion: @escaping (Result<URL, Error>) -> Void) {
+        downloadSpy?(request, completion)
+    }
+
+    func perform<Model: Encodable>(request: NetworkReqeust, completion: (Result<NetworkResponse<Model>, Error>) -> Void where Model: Decodable) {
+        // as in 'download()'
+    }
+}
+```
 ### links
 
 https://www.youtube.com/watch?v=RWrDahv8m0I&t=404s \
