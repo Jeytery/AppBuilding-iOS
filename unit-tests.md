@@ -10,8 +10,6 @@
 
 ### виды тестовых объектов 
 Эти объекты прокидываються в классы, чтобы у последнего в свою очередь не было зависимостей от кого-либо
-- spy (отслуживание поведения во время теста) 
-- stub (имитируют какое-то поведение)
 - mock (заглушка, это любой пустой объект)
 ```swift 
 class MockNetworkManager: NetworkManagerTarget {
@@ -31,9 +29,29 @@ class MockNetworkManager: NetworkManagerTarget {
         return nil
     }
 }
-````
+```
+- stub (имитируют какое-то поведение)
+```swift 
+class StubNetworkManager: NetworkManagerTarget {
+    func downlad(... args) {
+        // some standard realization like in 'perform()' 
+    }
 
+    func perform<Model: Encodable>(request: NetworkReqeust, completion: (Result<NetworkResponse<Model>, Error>) -> Void where Model: Decodable) {
+        // always return success status with data and status code 200
+        let model = try! JSONEncoder().decode(Model.self, from: Data())
+        comletion(.success(init(httpCode: 200, data: model)))
+    }
 
+    func getSomeArray() -> [Int] {
+        return [1, 2 ,3]
+    }
+
+    func getSomeValue() -> Int? {
+        return 1
+    
+```
+- spy (отслуживание поведения во время теста) 
 ### links
 
 https://www.youtube.com/watch?v=RWrDahv8m0I&t=404s \
