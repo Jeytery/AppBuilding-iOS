@@ -70,6 +70,15 @@ class SpyNetworkManager: NetworkManagerTarget {
     }
 }
 ```
+
+### pro tip 
+CMD + U == прогнать все тесты 
+
+### подкрытие файлов тестами в UI Xcode-a
+Product -> Scheme -> Edit theme
+Во вкладке 'Test' выбрать Options и тыкнуть галочку Code Caverage (Gather coverage for ...)
+Проджать CMD + U и в навигаторе файлов в последней вкладке появится пункт Coverage
+
 ### links
 
 https://www.youtube.com/watch?v=RWrDahv8m0I&t=404s \
