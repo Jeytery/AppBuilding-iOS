@@ -8,3 +8,7 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Bricks app architecture](bricks.md)
  - [Unit-tests](unit-tests.md)
  - [Networking layer](networking-layer.md)
+ - [Apple MVC](layer.md)
+ - [MVP](layer.md)
+ - [MVVM](layer.md)
+ - [VIPER](layer.md)
