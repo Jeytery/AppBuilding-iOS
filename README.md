@@ -9,6 +9,7 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Unit-tests](unit-tests.md)
  - [Networking layer](networking-layer.md)
  - [Apple MVC](layer.md)
- - [MVP](layer.md)
- - [MVVM](layer.md)
- - [VIPER](layer.md)
+ - UI Arhicheture patters
+   - [MVP](layer.md)
+   - [MVVM](layer.md)
+   - [VIPER](layer.md)
