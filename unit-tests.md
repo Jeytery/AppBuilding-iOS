@@ -13,6 +13,17 @@
 - spy (отслуживание поведения во время теста) 
 - stub (имитируют какое-то поведение)
 - mock (заглушка, это любой пустой объект)
+```swift 
+class MockNetworkService: NetworkManagerTarget {
+    func downlad(... args) {
+        // empty 
+    }
+
+    func perform<Model: Encodable>(... args) {
+        // empty
+    }
+}
+````
 
 
 ### links
