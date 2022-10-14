@@ -81,7 +81,7 @@ Product -> Scheme -> Edit theme
 
 ### links
 
-https://www.youtube.com/watch?v=RWrDahv8m0I&t=404s \
+https://www.youtube.com/watch?v=RWrDahv8m0I&t=404s  <- Виды инжектовых объектов в сущности + базовые тесты \
 https://habr.com/ru/post/654591/ \
 https://github.com/oleh-zayats/awesome-unit-testing-swift \
 https://www.vadimbulavin.com/real-world-unit-testing-in-swift/ \
