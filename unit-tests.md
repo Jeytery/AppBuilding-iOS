@@ -81,9 +81,16 @@ Product -> Scheme -> Edit theme
 
 ### links
 
-https://www.youtube.com/watch?v=RWrDahv8m0I&t=404s  <- Виды инжектовых объектов в сущности + базовые тесты \
+- Виды инжектовых объектов в сущности + базовые тесты \
+https://www.youtube.com/watch?v=RWrDahv8m0I&t=404s \
+
+- Базовые тесты + protips из конспекта \
 https://habr.com/ru/post/654591/ \
+
+- Куча ссылок на материалы для углубленного изучения \
 https://github.com/oleh-zayats/awesome-unit-testing-swift \
+
+
 https://www.vadimbulavin.com/real-world-unit-testing-in-swift/ \
 https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial
 
