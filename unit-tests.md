@@ -90,6 +90,6 @@ https://habr.com/ru/post/654591/
 - Куча ссылок на материалы для углубленного изучения \
 https://github.com/oleh-zayats/awesome-unit-testing-swift 
 
-- Инфа от рая \
+- Как создать тест прям в икскоде по пунктам с скриншотами \
 https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial
 
