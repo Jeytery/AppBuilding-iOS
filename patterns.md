@@ -257,8 +257,8 @@ class DataSaver {
         parseData()
         processData()
 
-        func openResource() 
-        func closeResource()
+        openResource() 
+        closeResource()
     }
 }
 
