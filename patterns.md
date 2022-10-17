@@ -7,6 +7,7 @@
 - [Composite](#composite)
 - [Template Methods](#template-methods)
 - [Singleton](#singleton)
+- [Delegate](#delegate)
 
 ### Chain Of Responsobility
 Как видно из названия наша задача создать чейн - для этого будет использоваться псевдорекурсия в класах
@@ -314,6 +315,59 @@ class API {
 }
 API.shared.getSomething()
 ```
+### Delegate 
+Похож на адаптер, но немного в другой форме. 
+```swift 
+struct User {
+    let name: String
+    let age: Int
+}
+
+protocol UsersViewControllerDelegate: AnyObject {
+    func userViewController(_ viewController: UsersViewController, didChoose user: User)
+}
+
+class UsersViewController: UIViewController {
+    
+    weak var delegate: UsersViewControllerDelegate?
+
+    private let tableView = UITableView()
+    private var users: [Users] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // setup tableView
+        // fetch users
+    }
+}
+
+extension UsersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectAt indexPath: IndexPath) {
+        delegate?.userViewController(self, didChoose: users[indexPath.row])
+    }
+}   
+```
+Можем как и в адаптере передавать в конструктор класса - но в основном используется как опциональная переменная. Извне присвоили ей реализацию - появился функционал. Ниже пример
+
+``` swift 
+class SomeViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let vc = UserViewController() 
+        vc.delegate = self 
+        self.present(vc)
+    }
+}
+
+extension SomeViewController: UserViewControllerDelegate {
+    func userViewController(_ viewController: UsersViewController, didChoose user: User) {
+        viewController.dismiss()
+        print(user)
+    }
+}
+```
+Когда будет выбран юзер, сработает метод didChoose user. У юайкитового UITableView переменные delegate и dataSource это тоже паттерны делегат
+
 
 ### sources
 https://github.com/artkirillov/DesignPatterns примеры в коде \
