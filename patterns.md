@@ -4,6 +4,7 @@
 - [Adapter](#adapter)
 - [Command](#command)
 - [Facade](#facade)
+- [Composite](#composite)
 
 ### Chain Of Responsobility
 Как видно из названия наша задача создать чейн - для этого будет использоваться псевдорекурсия в класах
@@ -213,6 +214,8 @@ private extension UIImageView {
 ```
 Да, то есть в экстеншине мы используем сабсистем загрузки фото. Сделаем сабсистем которая хранит ее в userDefault - получим еще одну сабсистем.
 Экстеншин в данном случае фасад 
+
+### Composite
 
 
 ### sources
