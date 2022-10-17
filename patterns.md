@@ -227,7 +227,7 @@ https://refactoring.guru/design-patterns/composite/swift/example#example-1 <- К
 В applу реализуем нужный нам функционал, в примере - стиль кнопкок, лейблов итд. 
 Можем использовать теперь разные стили для кнопок, вью или вообще контроллеров
 
-Мой реальный пример в приложении - [click](Composite)
+Мой реальный пример в приложении - [click](xcode-examples/Composite)
 
 ### sources
 https://github.com/artkirillov/DesignPatterns примеры в коде \
