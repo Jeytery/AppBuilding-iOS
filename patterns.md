@@ -153,5 +153,5 @@ uiKit.createSomePicture()
 
 
 ### sources
-https://github.com/artkirillov/DesignPatterns
-https://refactoring.guru/design-patterns/
+https://github.com/artkirillov/DesignPatterns примеры в коде \ 
+https://refactoring.guru/design-patterns/ примеры и вкоде и вообще все
