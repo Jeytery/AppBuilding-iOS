@@ -88,7 +88,7 @@ output:
 --- Done.
 Answer: Specific answer
 ```
-два Can't handle - callPhone и manager не смошли. Done - expert смог ответить на вопрос, дальше сам ответ
+два Can't handle - callPhone и manager не смогли. Done - expert смог ответить на вопрос, дальше сам ответ
 
 
 ### Adapter
@@ -219,14 +219,13 @@ private extension UIImageView {
 
 ### Composite
 
-https://refactoring.guru/design-patterns/composite/swift/example#example-1 \ <- Клевый реальный пример использование для UIKit 
+https://refactoring.guru/design-patterns/composite/swift/example#example-1 <- Клевый реальный пример использование для UIKit \
 
 Работа примерно как в игровом движке Unity. Встраиваем компоненты в UIView и UIViewController. 
 У каждого компонента есть метод accept и структура с входными данными (Theme). 
 Для отдельных UIView структура Theme может разной, только она должна наследываться от базовой Theme. 
-В apple реализуем нужный нам функционал, в примере - стиль кнопкок, лейблов итд.
-
-
+В applу реализуем нужный нам функционал, в примере - стиль кнопкок, лейблов итд. 
+Можем использовать теперь разные стили для кнопок, вью или вообще контроллеров
 
 ### sources
 https://github.com/artkirillov/DesignPatterns примеры в коде \
