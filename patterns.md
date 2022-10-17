@@ -1,6 +1,7 @@
 # Patterns 
 
 - [Chain Of Responsobility](#chain-of-responsobility)
+- [Adapter](#adapter)
 
 ### Chain Of Responsobility
 Как видно из названия наша задача создать чейн - для этого будет использоваться псевдорекурсия в класах
@@ -83,6 +84,67 @@ output:
 Answer: Specific answer
 ```
 два Can't handle - callPhone и manager не смошли. Done - expert смог ответить на вопрос, дальше сам ответ
+
+
+### Adapter
+Разная реализация, одного и того же протокола. 
+
+``` swift
+protocol Drawer {
+    func drawTriangle()
+}
+
+class OpenGLDrawer: Drawer {
+    func drawTriangle() {
+        // openGL realization 
+    }
+}
+
+class VulkanDrawer: Drawer {
+    func drawTriangle() {
+        // vulkan realization
+    }
+}
+
+class MetalDrawer: Drawer {
+    func drawTriangle() {
+        // metal realization  
+    }
+}
+
+class DirectXDrawer: Drawer {
+    func drawTriangle() {
+        // directX realization  
+    }
+}
+```
+Пример - разная реализция 'hello world' из мира графических апи. В реальности все это сложнее и просиходит совсем по-другому, это просто пример
+Есть базовый протокол, у которого разные реализации рисования треугольника. Четыре графических апи реализуют его по своему
+
+``` swift 
+class UIKit {
+    
+    private let drawer: Drawer
+
+    init(drawer: Drawer) {
+        self.drawer = drawer
+    }
+
+    func createSomePicture() {
+        // user drawer api to create something crazy cool 
+    }
+
+    func createSomethingWithDrawerHelp() {
+        // also 
+    }
+}
+
+let drawer = MetalDrawer()
+let uiKit = UIKit(drawer: drawer)
+uiKit.createSomePicture()
+```
+Класс инжектит этот функционал в себя - более того, он может получать любого, кто реализует протокол Drawer. 
+Поэтому мы можем менять релизацию рисования треугльника когда захотим. В примере из сорсов работа с вычислениями - принцип тот же 
 
 ### sources
 https://github.com/artkirillov/DesignPatterns
