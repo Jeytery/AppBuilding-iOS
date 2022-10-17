@@ -3,6 +3,7 @@
 - [Chain Of Responsobility](#chain-of-responsobility)
 - [Adapter](#adapter)
 - [Command](#command)
+- [Facade](#facade)
 
 ### Chain Of Responsobility
 Как видно из названия наша задача создать чейн - для этого будет использоваться псевдорекурсия в класах
@@ -150,6 +151,68 @@ uiKit.createSomePicture()
 ### Command 
 Есть протокол Command с одним методом execute(). Есть класс, в нем храним реализации этих протоколов в массиве и методом старт через forEach вызываем методом execute()
 
+### Facade 
+Система использует подсистему. 
+
+```Концептуальный пример```
+
+```swift 
+class Facade {
+
+    private var subsystem1: Subsystem1
+    private var subsystem2: Subsystem2
+
+    init(
+        subsystem1: Subsystem1 = Subsystem1(),
+        subsystem2: Subsystem2 = Subsystem2()
+    ) {
+        self.subsystem1 = subsystem1
+        self.subsystem2 = subsystem2
+    }
+
+    func operation() -> String {
+        // some functional with help of two subsystems 
+    }
+}
+```
+В данном случае что такое сабситемы это не важно. Это может быть все что угодно, что дает нам какой-то функионал. 
+
+```Реальный пример в iOS```
+```swift 
+private class ImageDownloader {
+    typealias Completion = (UIImage, Error?) -> ()
+    typealias Progress = (Int, Int) -> ()
+
+    func loadImage(
+        at url: URL?,
+        placeholder: UIImage? = nil,
+        progress: Progress? = nil,
+        completion: Completion
+    ) {
+        /// ... Set up a network stack
+        /// ... Downloading an image
+        /// ...
+        completion(UIImage(), nil)
+    }
+}
+
+private extension UIImageView {
+    func downloadImage(at url: URL?) {
+        print("Start downloading...")
+        let placeholder = UIImage(named: "placeholder")
+
+        ImageDownloader().loadImage(
+            at: url,
+            placeholder: placeholder
+        ) { image, error in
+            /// Crop, cache, apply filters, whatever...
+            self.image = image
+        })
+    }
+}
+```
+Да, то есть в экстеншине мы используем сабсистем загрузки фото. Сделаем сабсистем которая хранит ее в userDefault - получим еще одну сабсистем.
+Экстеншин в данном случае фасад 
 
 
 ### sources
