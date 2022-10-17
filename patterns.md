@@ -5,8 +5,7 @@
 - [Command](#command)
 - [Facade](#facade)
 - [Composite](#composite)
-- [Stratagy](#composite)
-- [Template Methods](#composite)
+- [Template Methods](#template-methods)
 
 ### Chain Of Responsobility
 Как видно из названия наша задача создать чейн - для этого будет использоваться псевдорекурсия в класах
@@ -215,7 +214,7 @@ private extension UIImageView {
     }
 }
 ```
-Да, то есть в экстеншине мы используем сабсистем загрузки фото. Сделаем сабсистем которая хранит ее в userDefault - получим еще одну сабсистем.
+В экстеншине мы используем сабсистем загрузки фото. Сделаем сабсистем которая хранит ее в userDefault - получим еще одну сабсистем.
 Экстеншин в данном случае фасад 
 
 ### Composite
@@ -228,6 +227,76 @@ https://refactoring.guru/design-patterns/composite/swift/example#example-1 <- К
 Можем использовать теперь разные стили для кнопок, вью или вообще контроллеров
 
 Мой реальный пример в приложении - [click](xcode-examples/Composite)
+
+### Template Methods
+``` swift 
+class DataSaver {
+
+    func extractData() {
+        print("Extracting data...")
+    }
+    
+    func parseData() {
+        print("Parsing data...")
+    }
+    
+    func processData() {
+        print("Processing data...")
+    }
+
+    func openResource() {
+        fatalError("openResource() must be overrided")
+    }
+
+    func closeResource() {
+        fatalError("closeResource() must be overrided")
+    }
+
+    func operation() {
+        extractData()
+        parseData()
+        processData()
+
+        func openResource() 
+        func closeResource()
+    }
+}
+
+class UserDefaultsSaver: DataSaver {
+    override func openResource() {
+        // realization
+    }
+
+    override func closeResource() {
+        // realization
+    }
+}
+
+class CoreDataSaver: DataSaver {
+    override func openResource() {
+        // realization
+    }
+
+    override func closeResource() {
+        // realization
+    }
+}
+
+class RealmDataSaver: DataSaver {
+    override func openResource() {
+        // realization
+    }
+
+    override func closeResource() {
+        // realization
+    }
+}
+
+let dataSaver = RealmDataSaver()
+dataSaver.operation()
+```
+Есть класс, который дает базовое использование методов. Наследники, которые по своему реализуют его дают разные функционал. 
+Легко заменяется адаптером, стартегией 
 
 ### sources
 https://github.com/artkirillov/DesignPatterns примеры в коде \
