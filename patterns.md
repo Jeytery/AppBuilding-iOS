@@ -6,6 +6,7 @@
 - [Facade](#facade)
 - [Composite](#composite)
 - [Template Methods](#template-methods)
+- [Singleton](#singleton)
 
 ### Chain Of Responsobility
 Как видно из названия наша задача создать чейн - для этого будет использоваться псевдорекурсия в класах
@@ -297,6 +298,22 @@ dataSaver.operation()
 ```
 Есть класс, который дает базовое использование методов. Наследники, которые по своему реализуют его дают разные функционал. 
 Легко заменяется адаптером, стартегией 
+
+### Singleton
+Класс с одим экземляром 
+```swift
+class API {
+
+    private init() {}
+
+    static let shared = API()
+    
+    func getSomething() -> Int {
+        return 1
+    }
+}
+API.shared.getSomething()
+```
 
 ### sources
 https://github.com/artkirillov/DesignPatterns примеры в коде \
