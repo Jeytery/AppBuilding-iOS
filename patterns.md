@@ -2,6 +2,7 @@
 
 - [Chain Of Responsobility](#chain-of-responsobility)
 - [Adapter](#adapter)
+- [Command](#command)
 
 ### Chain Of Responsobility
 Как видно из названия наша задача создать чейн - для этого будет использоваться псевдорекурсия в класах
@@ -146,5 +147,11 @@ uiKit.createSomePicture()
 Класс инжектит этот функционал в себя - более того, он может получать любого, кто реализует протокол Drawer. 
 Поэтому мы можем менять релизацию рисования треугльника когда захотим. В примере из сорсов работа с вычислениями - принцип тот же 
 
+### Command 
+Есть протокол Command с одним методом execute(). Храним реализации этих протоколов в массиве и методом старт через forEach вызываем методом execute()
+
+
+
 ### sources
 https://github.com/artkirillov/DesignPatterns
+https://refactoring.guru/design-patterns/
