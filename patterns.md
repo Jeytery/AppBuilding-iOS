@@ -219,6 +219,14 @@ private extension UIImageView {
 
 ### Composite
 
+https://refactoring.guru/design-patterns/composite/swift/example#example-1 \ <- Клевый реальный пример использование для UIKit 
+
+Работа примерно как в игровом движке Unity. Встраиваем компоненты в UIView и UIViewController. 
+У каждого компонента есть метод accept и структура с входными данными (Theme). 
+Для отдельных UIView структура Theme может разной, только она должна наследываться от базовой Theme. 
+В apple реализуем нужный нам функционал, в примере - стиль кнопкок, лейблов итд.
+
+
 
 ### sources
 https://github.com/artkirillov/DesignPatterns примеры в коде \
