@@ -5,6 +5,8 @@
 - [Command](#command)
 - [Facade](#facade)
 - [Composite](#composite)
+- [Stratagy](#composite)
+- [Template Methods](#composite)
 
 ### Chain Of Responsobility
 Как видно из названия наша задача создать чейн - для этого будет использоваться псевдорекурсия в класах
