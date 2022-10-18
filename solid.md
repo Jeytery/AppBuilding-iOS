@@ -136,6 +136,7 @@ struct SuperCleanEnum {
     )
 }
 ```
+Опен Клоуз - это конечно же мечта. Но в реальности продумать все сходу и сразу - невозможно
 ### Liskov
 ### Interface Segregation
 ### Dependency Inversion
