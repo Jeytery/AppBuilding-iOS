@@ -11,6 +11,7 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Networking layer](networking-layer.md)
  - [Apple MVC](layer.md)
  - [Patterns](patterns.md)
+ - [SOLID](solid.md)
  - UI Arhicheture patters
    - [MVP](layer.md)
    - [MVVM](layer.md)
