@@ -76,9 +76,66 @@ BusinessLogic будет иметь доступ к ивентам контро�
 ### Open Close
 Ентити открыт только для расширения, модификация запрещена. \
 Когда ты можешь в любой момент добавить новый пункт в меню. 
-Не нужно кастылить что-то. [Пример](xcode-examples/SOLID/OpenClose)
+Не нужно кастылить что-то. [Пример](xcode-examples/SOLID/OpenClose) \
+\
+Еще один пример:
+``` swift 
+enum NotCleanEnum {
+    case value1
+    case value2
+    case value3
+    
+    var body: String {
+        switch self {
+            case .value1: return "1"
+            case .value2: return "2"
+            case .value3: return "3"
+        }
+    }
+    
+     var body2: String {
+        switch self {
+            case .value1: return "1.1"
+            case .value2: return "2.2"
+            case .value3: return "3.3"
+        }
+    } 
+}
 
+struct CleanEnum {
+    let body: String
+    let body2: String
+    
+    static let value1 = CleanEnum(body: "1", body2: "1.1")
+    static let value2 = CleanEnum(body: "2", body2: "2.2")
+}
 
+```
+Добавление новых кейсов в первом случае заставит переделывать свичи. Во втором - нет. Правда все равно сломается если вдруг вам понадобиться добавить 
+новое свойство. НО можно и это решить
+```swift 
+struct SuperCleanEnum {
+    enum DataKey: String, Hashable {
+        case data1 = "data1"
+        case data2 = "data2"
+        case data3 = "data3"
+    }
+    
+    let data: [DataKey: Any]
+    
+    static let case1 = SuperCleanEnum(
+        data: [.data1: 5, .data2: "i super very love fucking SOLID", .data3: CleanEnum.value2]
+    )
+    
+    static let case2 = SuperCleanEnum(
+        data: [.data1: 5, .data2: "i super very love fucking SOLID"]
+    )
+    
+    static let case3 =  SuperCleanEnum(
+        data: [.data1: 5, .data3: CleanEnum.value1]
+    )
+}
+```
 ### Liskov
 ### Interface Segregation
 ### Dependency Inversion
