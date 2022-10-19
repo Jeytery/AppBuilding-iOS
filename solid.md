@@ -182,4 +182,22 @@ class UserDefaultsAnimalLoader: AnimalLoader {
 Не очень-то красиво не уведомить его об ошибке, которую обещали кинуть.
 
 ### Interface Segregation
+Общие протоколы - плохо. Фукнционал, который сущность не использует - плохо. Разделяй и властвуй. 
+``` swift 
+protocol Hashable {}
+protocol Equitable {}
+protocol Comparable {}
+```
+Свифт лучший представитель правлиа IS. Все его типы это набор протоколов и мы можем очень гибко использовать их в разных местах \
+\
+```как было в objective-c```
+``` swift 
+public protocol NSObjectProtocol {
+    func isEqual(_ object: Any?) -> Bool
+    var hash: Int { get }
+}
+```
+Не очень гибко, в свифте можно быть только Equitable или Hashable или вместе если того требуют обстоятельства. Гибко? Гибко
+
+
 ### Dependency Inversion
