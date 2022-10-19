@@ -137,6 +137,48 @@ struct SuperCleanEnum {
 }
 ```
 Опен Клоуз - это конечно же мечта. Но в реальности продумать все сходу и сразу - невозможно
+
 ### Liskov
+Замена наследников протокола не должна приводить к неожиданных последсвиям в программе. \
+Пример 
+
+```не клин```
+```swift 
+protocol AnimalLoader {
+    func loadAnimals(_ callback: @escaping (Result<Any, Error>) -> Void)
+}
+
+class UserDefaultsAnimalLoader: AnimalLoader {
+    func loadAnimals(_ callback: @escaping (Result<Any, Error>) -> Void) {
+        if let animals = UserDefualts.standard.stringArray(forKey: "animals") {
+            callback(.success(animals))
+        } 
+        else {
+            calback(.failure(NoAnimals()))
+        }
+    }
+}
+
+```
+Не клин чисто потому что у нас протокол AnimalLoader в коллбэк может передать вообще все что угодно. Там может быть как энималы так и инты \
+Клином будет помнять Any в коллбэке на [String] - у нас будет всегда один и тот же результат от всех наследников AnimalLoader \
+\
+```второй не клин```
+
+```swift 
+class UserDefaultsAnimalLoader: AnimalLoader {
+    func loadAnimals(_ callback: @escaping (Result<Any, Error>) -> Void) {
+        if let animals = UserDefualts.standard.stringArray(forKey: "animals") {
+            callback(.success(animals))
+        } 
+        else {
+            print("No animals")
+        }
+    }
+}
+```
+Не использовать Error, тот кто возпользуется этой реализацией протокола будет ожидать что может получить ошибку и напишет вокруг нее логику.
+Не очень-то красиво не уведомить его об ошибке, которую обещали кинуть.
+
 ### Interface Segregation
 ### Dependency Inversion
