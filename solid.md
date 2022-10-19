@@ -197,7 +197,35 @@ public protocol NSObjectProtocol {
     var hash: Int { get }
 }
 ```
-Не очень гибко, в свифте можно быть только Equitable или Hashable или вместе если того требуют обстоятельства. Гибко? Гибко
+Не очень гибко, в свифте можно быть только Equitable или Hashable или вместе если того требуют обстоятельства. Гибко? Гибко \
+\
+В UIKit этот подход можно встретить в UITableView. Переменные delegate и dataSource это буквально IS во плоти. Каждый отвечает за свое. 
+```swift 
+class UITableView: UITableView {
+    weak var delegate: UITableViewDelegate?
+    weak var dataSource: UITableViewDataSource
+}
+```
+\
+Как бы использовать? Вот
 
+```swift 
+protocol MyViewControllerEventOutput: AnyObject {
+    func myViewController(didTap button1: UIButton)
+    func myViewController(didTap button2: UIButton)
+    func myViewController(didTap button3: UIButton)
+}
+
+protocol MyViewControllerDelegate: AnyObject {
+    func myViewController(didEndWorkWith data: Data)    
+}
+
+class MyViewController: UIViewController {
+    weak var delegate: MyViewControllerDelegate?
+    weak var eventOutput: MyViewControllerEventOutput?
+}
+```
+Разделили общие ивенты и ивенты для уведомление о состояних работы в разные протоколы. 
+На первый можно подписывать презентеры, на второй - тех, кто отвечает за навигацию
 
 ### Dependency Inversion
