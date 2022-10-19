@@ -201,7 +201,7 @@ public protocol NSObjectProtocol {
 \
 В UIKit этот подход можно встретить в UITableView. Переменные delegate и dataSource это буквально IS во плоти. Каждый отвечает за свое. 
 ```swift 
-class UITableView: UITableView {
+class UITableView: UIView {
     weak var delegate: UITableViewDelegate?
     weak var dataSource: UITableViewDataSource
 }
