@@ -7,6 +7,7 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Navigation](navigation.md)
  - [Verified libs](verified-libs.md)
  - [Bricks app architecture](bricks.md)
+ - [Type Driven Development](type-driven-development.md)
  - [Unit-tests](unit-tests.md)
  - [Networking layer](networking-layer.md)
  - [Apple MVC](layer.md)
