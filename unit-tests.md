@@ -91,5 +91,8 @@ https://habr.com/ru/post/654591/
 https://github.com/oleh-zayats/awesome-unit-testing-swift 
 
 - Как создать тест прям в икскоде по пунктам с скриншотами \
-https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial
+https://www.raywenderlich.com/21020457-ios-unit-testing-and-ui-testing-tutorial \
+
+- live coding по теме тестирования \
+https://www.youtube.com/watch?v=CLWeu7fIJDM&t=1492
 
