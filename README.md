@@ -19,3 +19,7 @@ My subjective view on building apps for iOS with swift in Xcode
    - [MVP](layer.md)
    - [MVVM](layer.md)
    - [VIPER](layer.md)
+
+
+### links 
+https://www.craft.do/s/d4AG8EZPbd9xPa
