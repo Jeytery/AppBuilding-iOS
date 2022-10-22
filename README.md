@@ -13,6 +13,8 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Apple MVC](layer.md)
  - [Patterns](patterns.md)
  - [SOLID](solid.md)
+ - App Distibution
+   - App Screenshots Generator
  - UI Arhicheture patters
    - [MVP](layer.md)
    - [MVVM](layer.md)
