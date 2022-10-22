@@ -14,7 +14,7 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Patterns](patterns.md)
  - [SOLID](solid.md)
  - App Distibution
-   - App Screenshots Generator
+   - [App Screenshots Generator](https://mockuphone.com/device/apple-iphone13promax-sierrablue)
  - UI Arhicheture patters
    - [MVP](layer.md)
    - [MVVM](layer.md)
