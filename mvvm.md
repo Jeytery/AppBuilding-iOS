@@ -130,3 +130,5 @@ Ouput как понятия для нас умирает. Я оставил ег
 \
 [Ссылка](#mvvm) на полный проект
 
+### sources 
+https://www.youtube.com/watch?v=6bWRPHbj4Cw&t
