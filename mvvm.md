@@ -19,7 +19,7 @@ protocol ViewModelable {
 
 ```вариант 1```
 ```swift 
-class RootViewController {
+class RootViewController: UIViewController {
   
     private let viewModel: RootViewModel
     private let bag = DispasedBag()
@@ -31,7 +31,7 @@ class RootViewController {
     }
     
     private func bind() {
-         let input = RootViewModel.Input(
+        let input = RootViewModel.Input(
             add: button.rx.tap.asDriver()
         )
         
@@ -75,5 +75,58 @@ output.isLoading.subscribe {
 .disposed(by: bag)
 ```
 Мне не очень нравиться такой стиль MVVM. Нам буквально нужно на что-то реагировать, думать о каких-то стейтах, дополнять эту логику в других вью, если мы захотим использовать ViewModel еще где-то. Я не хочу лишний раз задумываться как мне нужно взаимодействовать с определнной ViewModel \
-Мой субъективно более предпочтительный вариант
+Мой субъективно более предпочтительный вариант \
 ``` вариант 2```
+
+```swift 
+
+// протокол который нужен ViewModel для корректной работы
+protocol RootViewModelUIInput {
+    func startLoading()
+    func stopLoading()
+}
+
+class RootViewController: UIViewController {
+   
+   private let viewModel: RootViewModel
+
+    init(viewModel: RootViewModel) {
+        self.viewModel = viewModel
+        ...
+        bind()
+    }   
+    
+    private func bind() {
+    }
+}
+
+extension RootViewController: RootViewModelUIInput {
+    ... make all required funcs 
+}
+
+```
+Assembly module
+``` swift 
+    extension RootViewController {
+        static func module() -> RootViewController {
+            let viewModel = RootViewModel()
+            let vc = RootViewController(viewModel: viewModel)
+            viewModel.input = vc
+            return vc
+        }
+    }
+```
+Теперь байнд такой 
+```swift 
+private func bind() {
+    let input = RootViewModel.Input(
+        add: button.rx.tap.asDriver()
+    )
+    let _ = viewModel.transform(input: input)
+}
+        
+```
+Ouput как понятия для нас умирает. Я оставил его только потому что, ну может оттуда может быть что-то важное приходить. Но по существу мы теперь делаем две вещи и они для нас всегда одинаковые - отдаем ивенты и реализовываем юай функции. А когда их использовать, по каким принципам и логике - все это решает ViewModel. А View остаеться очень глупой, только отдает ивенты и только реализует юай функции \
+\
+[Ссылка](#mvvm) на полный проект
+
