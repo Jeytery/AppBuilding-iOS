@@ -24,3 +24,6 @@ My subjective view on building apps for iOS with swift in Xcode
 
 ### links 
 https://www.craft.do/s/d4AG8EZPbd9xPa
+
+### musthave
+- navigation
