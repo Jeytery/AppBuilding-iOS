@@ -1,5 +1,13 @@
-bricks
+# bricks
 
+### problem 1 
+Module 1 -> Module 2 -> Module 3
+module 3 can't send event to module 1 without implementing protocols of all chain modules
+
+potential problem solving 
+delegate chain or responder chain
+
+### other
 problems research
 to big and responsive UIView
 
