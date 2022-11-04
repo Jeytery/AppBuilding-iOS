@@ -1,6 +1,6 @@
 # Patterns 
 
-- [Chain Of Responsobility](#chain-of-responsobility)
+- [Responder Chain](#chain-of-responsobility)
 - [Adapter](#adapter)
 - [Command](#command)
 - [Facade](#facade)
