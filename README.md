@@ -14,6 +14,7 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Patterns](patterns.md)
  - [SOLID](solid.md)
  - [Reactive programming](reactive-programming.md)
+ - [objective-c](objective-c.md)
  - App Distibution
    - [App Screenshots Generator](https://mockuphone.com/device/apple-iphone13promax-sierrablue)
  - UI Arhicheture patters
