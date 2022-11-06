@@ -1,4 +1,4 @@
-# AppBuilding 
+# AppBuilding (Project Swiftonica)
 
 My subjective view on building apps for iOS with swift in Xcode
 
