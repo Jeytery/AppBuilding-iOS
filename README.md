@@ -20,7 +20,7 @@ My subjective view on building apps for iOS with swift in Xcode
  - UI Arhicheture patters
    - [MVP](layer.md)
    - [MVVM](mvvm.md)
-   - [VIPER](layer.md)
+   - [VIPER](VIPER.md)
 
 
 ### links 
