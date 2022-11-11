@@ -1,4 +1,4 @@
 # reactive programming 
 
-- [RxSwfit](rx-swift.md)
+- [RxSwift](rx-swift.md)
 - [Combine](combine.md)
