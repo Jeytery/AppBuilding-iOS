@@ -9,6 +9,6 @@ https://apps.apple.com/ru/app/id1495622004
 
 - Pro Runner 
 
-Если бы эпл делала приложение для бега - вот это было бы оно. 10/10
+Если бы эпл делала приложение для бега - вот это было бы оно. 10/10 \
 https://apps.apple.com/us/app/run-tracker-app-pro-runner/id1596657751
 
