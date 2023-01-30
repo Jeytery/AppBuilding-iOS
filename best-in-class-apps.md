@@ -18,6 +18,6 @@ https://apps.apple.com/us/app/run-tracker-app-pro-runner/id1596657751
 
 - Arabesque 
 
-Приложение которое использует юай коллекции на максимум. Красиво и отзывчиво 
+Приложение которое использует юай коллекции на максимум. Красиво и отзывчиво \
 https://apps.apple.com/bh/app/recipes-by-arabesque-kitchen/id1617055933
 
