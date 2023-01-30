@@ -5,7 +5,10 @@ https://apps.apple.com/ru/app/id1495622004
  
 
 - Секвойя 
-Супер крутой табличный интерфейс
+
+Супер крутой табличный интерфейс \ 
+https://apps.apple.com/app/id162
+
 
 - Pro Runner 
 
