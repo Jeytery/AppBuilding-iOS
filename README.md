@@ -3,6 +3,7 @@
 My subjective view on building apps for iOS with swift in Xcode
 
 ### Pages: 
+ - [basics](basics.md)
  - [App layers](layers.md)
  - [Navigation](navigation.md)
  - [Verified libs](verified-libs.md)
