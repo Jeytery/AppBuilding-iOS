@@ -23,6 +23,7 @@ My subjective view on building apps for iOS with swift in Xcode
    - [MVVM](mvvm.md)
    - [VIPER](VIPER.md)
  - [Apple Platforms Design](https://developer.apple.com/design/resources/#ios-apps) 
+ - [Architecture](architecture.md)
  - [best in class apps](best-in-class-apps.md)
  
 
