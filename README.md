@@ -5,6 +5,9 @@ My subjective view on building apps for iOS with swift in Xcode
 ### Pages: 
  - [basics](basics.md)
  
+ #### sources 
+ - [iOS knowledge base](https://www.craft.do/s/d4AG8EZPbd9xPa)
+ 
  #### app achitecture 
  - [App layers](layers.md)
  - [Navigation](navigation.md)
@@ -33,4 +36,4 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Apple Platforms Design](https://developer.apple.com/design/resources/#ios-apps) 
 
 ### links 
-https://www.craft.do/s/d4AG8EZPbd9xPa
+
