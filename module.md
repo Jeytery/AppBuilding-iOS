@@ -7,6 +7,7 @@
 - разбираемость на кусочки  
     Часть модуля должны быть сделаны так, что их можно использовать где-то еще. Допустим у нас модуль это UIViewController, Presenter - каждой из этих частей следует иметь возможность испльзоваться где-то еще. Например подлючить другую логику в UIViewController или же подключить Presenter к другому UIViewController 
 
+### примеры 
 ```swift 
 
 protocol ModuleViewControllerEventOutput: AnyObject {
@@ -38,7 +39,27 @@ extension ModuleViewController: ModuleViewControllerPublicInterface {
 ```
 **ModuleViewControllerEventOutput** отдает ивенты юая кому-угодно.  
 **ModuleViewControllerPublicInterface** говорит какие методы доступны для взаимодействия с модулем.  
-**ModuleViewControllerInterfaceContract** дает более низкоуровневый доступ к юаю для написания более гибкой логики. Должен использоваться сущностями с бизнес логикой 
+**ModuleViewControllerInterfaceContract** дает более низкоуровневый доступ к юаю для написания более гибкой логики. Должен использоваться сущностями с бизнес логикой  
 
-Стотит заметить что в UIViewController, нет ничего, ни логики юай, ни запрос в сеть. Это все должно быть сделано в Presenter (как называется сущность, которая берет на себя всю логику по большей части это не важно, но в дальшейшем я буду ее называть именно так)
+Единственная зависимость тут это UIKit/SwiftUI, он по определению всегда идет слоем ниже. Поэтому все окей
 
+Стоит заметить что в UIViewController, нет ничего, ни логики юай, ни запрос в сеть. Это все должно быть сделано в Presenter (как называется сущность, которая берет на себя всю логику по большей части это не важно, но в дальшейшем я буду ее называть именно так)
+
+```swift 
+protocol ModulePresenterNetworkingContract {
+    // all methods to work with network
+}
+
+class ModulePresenter {
+    init(networkingContract: ModulePresenterNetworkingContract, interfaceContract: ModuleViewControllerInterfaceContract) {
+        // business logic 
+    }
+}
+
+extension ModulePresenter: ModuleViewControllerEventOutput {
+    // reaction on events 
+}
+```
+Presenter опять таки тоже ни от кого не зависит. Будет его NetworkingContract реализовывать сущность Singleton или же просто сами с нуля напишем - его это не волнует. Дайте, а он уже все сделает что нужно.  
+
+Не важно передаються ли данные через RxSwift, все что тут было описано можно переписать через него. Не важно делите вы еще сильнее Presenter, главное это описанные пункты выше
