@@ -32,12 +32,5 @@ My subjective view on building apps for iOS with swift in Xcode
    - [VIPER](VIPER.md)
  - [Apple Platforms Design](https://developer.apple.com/design/resources/#ios-apps) 
 
-
- 
-
-
 ### links 
 https://www.craft.do/s/d4AG8EZPbd9xPa
-
-### musthave
-- navigation
