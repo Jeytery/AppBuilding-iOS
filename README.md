@@ -4,13 +4,21 @@ My subjective view on building apps for iOS with swift in Xcode
 
 ### Pages: 
  - [basics](basics.md)
+ 
+ #### app achitecture 
  - [App layers](layers.md)
  - [Navigation](navigation.md)
+ - [Networking layer](networking-layer.md)
+ - [Bricks app architecture](bricks.md) 
+ - [Architecture](architecture.md)
+ 
+ #### discover
  - [Verified libs](verified-libs.md)
- - [Bricks app architecture](bricks.md)
+ - [best in class apps](best-in-class-apps.md)
+ 
+ #### others 
  - [Type Driven Development](type-driven-development.md)
  - [Unit-tests](unit-tests.md)
- - [Networking layer](networking-layer.md)
  - [Apple MVC](layer.md)
  - [Patterns](patterns.md)
  - [SOLID](solid.md)
@@ -23,8 +31,8 @@ My subjective view on building apps for iOS with swift in Xcode
    - [MVVM](mvvm.md)
    - [VIPER](VIPER.md)
  - [Apple Platforms Design](https://developer.apple.com/design/resources/#ios-apps) 
- - [Architecture](architecture.md)
- - [best in class apps](best-in-class-apps.md)
+
+
  
 
 
