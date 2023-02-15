@@ -13,22 +13,22 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Navigation](navigation.md)
  - [Networking layer](networking-layer.md)
  - [Bricks app architecture](bricks.md) 
- - [Architecture](architecture.md)
+ - [Architecture](architecture.md) ! 
  
  #### discover
- - [Verified libs](verified-libs.md)
- - [best in class apps](best-in-class-apps.md)
+ - [Verified libs](verified-libs.md) !
+ - [best in class apps](best-in-class-apps.md) !
  
  #### others 
  - [Type Driven Development](type-driven-development.md)
- - [Unit-tests](unit-tests.md)
+ - [Unit-tests](unit-tests.md) !
  - [Apple MVC](layer.md)
- - [Patterns](patterns.md)
- - [SOLID](solid.md)
- - [Reactive programming](reactive-programming.md)
+ - [Patterns](patterns.md) !
+ - [SOLID](solid.md) !
+ - [Reactive programming](reactive-programming.md) !
  - [objective-c](objective-c.md)
  - App Distibution
-   - [App Screenshots Generator](https://mockuphone.com/device/apple-iphone13promax-sierrablue)
+   - [App Screenshots Generator](https://mockuphone.com/device/apple-iphone13promax-sierrablue) !
  - UI Arhicheture patters
    - [MVP](layer.md)
    - [MVVM](mvvm.md)
