@@ -35,8 +35,7 @@ graph TD;
     ViewControllers-->UI_Framework;
     CoreViewControllers-->UI_Framework;
 ```
+[See also in figma](https://www.figma.com/file/DJTcK2QskNcJqHGOc7jO72/layer-based-architercture?node-id=0%3A1&t=ga5c0Q0v115XXLgg-1)
 
-See also in figma 
-https://www.figma.com/file/DJTcK2QskNcJqHGOc7jO72/layer-based-architercture?node-id=0%3A1&t=ga5c0Q0v115XXLgg-1
 
 
