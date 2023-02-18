@@ -32,6 +32,8 @@ graph TD;
      
     ViewControllers-->CoreUI;
     CoreViewControllers-->CoreUI;
+    ViewControllers-->UI_Framework;
+    CoreViewControllers-->UI_Framework;
 ```
 
 
