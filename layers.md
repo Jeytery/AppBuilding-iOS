@@ -1,4 +1,4 @@
-### data flow 
+### Data Flow 
 
 ```mermaid
 graph TD;
@@ -18,6 +18,7 @@ graph TD;
 ```mermaid
 graph TD;
   Coordinators-->Modules;
+  Coordinators-->Navigation;
     Modules-->Presenters;
     Modules-->CorePresenters;
     Modules-->ViewControllers;
@@ -29,7 +30,8 @@ graph TD;
       API_Services-->Models;
       API_Services-->Networking;
      
-     ViewControllers-->CoreUI;
-     CoreViewControllers-->CoreUI;
-      
+    ViewControllers-->CoreUI;
+    CoreViewControllers-->CoreUI;
 ```
+
+
