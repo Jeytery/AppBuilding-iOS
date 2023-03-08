@@ -1,5 +1,8 @@
 # basics 
 
+- [labs](labs.md)
+
+### lections 
 - [lazylaod ios course](https://www.youtube.com/watch?v=aSoWDKonXew&list=PLJfJvphK-POx-wz_e9vcMnY3IhHi9MSwH&ab_channel=LazyLoadSwift%26iOS)
   - 7 базовые типы данных 
   - 8.1 комментарии +
