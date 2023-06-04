@@ -12,6 +12,7 @@ My subjective view on building apps for iOS with swift in Xcode
  - [Bricks app architecture](bricks.md) 
  - [Architecture](architecture.md) !$
  - [navigation](https://frankrausch.com/ios-navigation)
+ - [di](https://jonfir.github.io/posts/ioc-ios/)
  
  #### discover $
  - [Verified libs](verified-libs.md) !
